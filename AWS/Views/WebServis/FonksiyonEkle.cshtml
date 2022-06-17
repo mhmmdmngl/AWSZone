@@ -1,0 +1,58 @@
+﻿@model AWS.Models.fonksiyonModel
+
+@{
+    ViewBag.Title = "FonksiyonEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FonksiyonEkle</h2>
+
+@using (Html.BeginForm("FonksiyonEkle", "WebServis", FormMethod.Post))
+{
+<div class="card-body">
+    <div class="form-group">
+        <label>Fonksiyon Adı</label>
+
+        @Html.TextBoxFor(Model => Model.fonksiyonAdi, new { @class = "form-control", @Placeholder = "Fonksiyon Adı" })
+    </div>
+    <div class="form-group">
+        <label for="mesaibit">Veri Tabanı Seç</label>
+        @Html.DropDownList("dbListesi", null, "Veri Tabanı Seçin", new { @name = "drpDBList", @class = "form-control drpDB" })
+    </div>
+    <div class="form-group" hidden>
+        <label>Tablo Seçin</label>
+
+        @Html.TextBoxFor(Model => Model.wsid, new { @class = "form-control", @Placeholder = "Şablon Adini Girin" })
+    </div>
+    <div class="form-group">
+        <label>Tablo Seçin</label>
+        <select class="form-control drpTableC" id="drpTable">
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Kolonlar</label>
+        <select multiple="" class="form-control drpKolonc" id="drpKolons" name="kolons">
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Tablo Seçin</label>
+        <select class="form-control drpTableCc" id="drpMetod" name="metot">
+            <option value="select">Select</option>
+            <option value="insert">Insert</option>
+            <option value="update">Update</option>
+            <option value="delete">Delete</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Sql Sorgusu</label>
+        <textarea id="sqlSorgu" class="form-control" name="txtSql" rows="5" cols="50"></textarea>
+    </div>
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Web Servisi Oluştur</button>
+    </div>
+</div>
+}
+
+

@@ -1,0 +1,42 @@
+﻿@model AWS.Models.restParemetersModel
+
+@{
+    ViewBag.Title = "restParamEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Api Parametresi Ekle</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="restParamEkle" method="post">
+                <div class="card-body">
+                    <div class="form-group" style="display: none;">
+                        <label for="exampleInputEmail1">Rest Id</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Parametre Adı" name="txtid" value=@Model.restId>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Adı</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Parametre Adı" name="txtparamname">
+                    </div>
+
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success float-right">Rest Api Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+
+</div>
+

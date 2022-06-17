@@ -1,0 +1,36 @@
+﻿@model AWS.Models.wsUser
+
+@{
+    ViewBag.Title = "wsUserEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            @using (Html.BeginForm("wsUserEkle", "wsUser", FormMethod.Post))
+            {
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+
+                        @Html.TextBoxFor(Model => Model.wsKullanici, new { @class = "form-control", @Placeholder = "Kullanıcı Adını Girin..." })
+                    </div>
+                    <div class="form-group">
+                        <label>Parola</label>
+
+                        @Html.PasswordFor(Model => Model.wsPassword, new { @class = "form-control", @Placeholder = "Parolayı Girin..." })
+                    </div>
+
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Kullanıcı Oluştur.</button>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+
+

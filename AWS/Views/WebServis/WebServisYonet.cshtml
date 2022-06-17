@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "WebServisYonet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("SablonEkle", "Sablon", FormMethod.Post))
+{
+    <div class="card-body">
+
+        <div class="form-group">
+            <label for="mesaibit">Tablolar</label>
+            @Html.DropDownList("tabloListesi", null, "Tablo Listesi", new { @class = "form-control" })
+        </div>
+    
+    </div>
+}

@@ -1,0 +1,59 @@
+﻿@model AWS.Models.DBModel
+
+@{
+    ViewBag.Title = "VTEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Veri Tabanı Ekle</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form action="VTEkle" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Adı</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="DB Adı Girin..." name="txtAdi">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Açıklama</label>
+                            <textarea id="w3review" class="form-control" name="txtAciklama" rows="2" cols="50"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Bağlantı String</label>
+                            <textarea id="w3review" class="form-control" name="txtBaglanti" rows="2" cols="50"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">DB Adı</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="txtDBAdi" placeholder="Hostname">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="txtUserName" placeholder="DB Kullanıcı Adını girin...">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Password</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="txtPassword" placeholder="DB Parolasını girin...">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Hostname</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="txtHostname" placeholder="Hostname">
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success float-right">Veri Tabanı Ekle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+
+
+    </div>
+
